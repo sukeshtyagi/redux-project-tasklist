@@ -10,7 +10,7 @@ function reducerAddTask(state = initialState, action) {
     case ADD_TASK:
       return {
         ...state,
-        tasks: [...state.tasks, action.payload],
+        tasks: [...state.tasks, { id:crypto.randomUUID(),task: action.payload, status: "pending" }],
       };
 
     default:
