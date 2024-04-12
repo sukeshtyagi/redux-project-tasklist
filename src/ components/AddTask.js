@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 function AddTask({ addTaskHandler, taskDetails }) {
-  console.log("data received from state", taskDetails);
   const [task, setTask] = useState();
 
   return (
@@ -28,7 +27,6 @@ function AddTask({ addTaskHandler, taskDetails }) {
         >
           Add task
         </button>
-        <p className="text-white">tasks {taskDetails}</p>
       </div>
     </div>
   );

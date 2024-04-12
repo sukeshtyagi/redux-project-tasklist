@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./ components/Header";
-import AllTasks from "./ components/AllTasks";
+import AllTasksContainer from "./containers/AllTasksContainer";
 import AddTaskContainer from "./containers/AddTaskContainer";
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<AllTasks />} />
+        <Route path="/" element={<AllTasksContainer />} />
         <Route path="/add" element={<AddTaskContainer />} />
         <Route path="/active" element={<Header />} />
         <Route path="/completed" element={<Header />} />

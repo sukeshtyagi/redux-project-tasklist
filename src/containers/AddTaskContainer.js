@@ -1,4 +1,3 @@
-import React from "react";
 import addTask from "../services/actions/addTask";
 import AddTask from "../ components/AddTask";
 import { connect } from "react-redux";
