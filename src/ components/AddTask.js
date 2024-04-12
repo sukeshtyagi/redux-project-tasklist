@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 function AddTask({ addTaskHandler, taskDetails }) {
   console.log("data received from state", taskDetails);
+  const [task, setTask] = useState();
+
   return (
     <div className=" outer box-border w-1/2 mx-auto p-5 py-10 bg-pink-900">
       <div className="container box-border w-full bg-inherit flex flex-col justify-center items-start gap-10">
@@ -10,18 +12,23 @@ function AddTask({ addTaskHandler, taskDetails }) {
         </h1>
         <input
           type="text"
+          value={task}
+          onChange={(e) => {
+            setTask(e.target.value);
+          }}
           placeholder="Enter task details"
           className="heading  box-border w-3/4 m-auto text-xl text-center px-4 py-1 rounded-lg"
         />
         <button
           className="heading  box-border w-fit m-auto text-xl text-center px-4 py-1 rounded-lg bg-purple-400"
           onClick={() => {
-            addTaskHandler("123");
-            console.log("ui triggering");
+            addTaskHandler(task);
+            setTask("")
           }}
         >
           Add task
         </button>
+        <p className="text-white">tasks {taskDetails}</p>
       </div>
     </div>
   );

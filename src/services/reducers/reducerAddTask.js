@@ -6,7 +6,6 @@ const initialState = {
 };
 
 function reducerAddTask(state = initialState, action) {
-  console.log("action received inreducer", action);
   switch (action.type) {
     case ADD_TASK:
       return {
