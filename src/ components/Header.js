@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 function Header() {
   const navigate = useNavigate();
   return (
-    <div className="header box-border w-fit m-auto flex justify-center items-center gap-12 p-5 bg-yellow-500">
+    <div className="header box-border w-fit m-auto flex justify-center items-center gap-12 my-16 p-5 bg-yellow-500">
       <p
         className="headerItem box-border hover:text-zinc-100 cursor-pointer"
         onClick={() => {
